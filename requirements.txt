@@ -3,3 +3,4 @@ streamlit
 gunicorn
 pandas
 sklearn
+matplotlib
