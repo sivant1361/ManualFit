@@ -1,0 +1,8 @@
+numpy
+streamlit
+gunicorn
+pandas
+sklearn
+
+
+
