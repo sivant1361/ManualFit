@@ -14,6 +14,8 @@ import time
 st.title('Interactive plots using streamlit')
 
 
+# R/(1+1j*2*3.14*R*F*C)
+
 def download_button(object_to_download, download_filename, button_text, pickle_it=False):
     """
     Generates a link to download the given object_to_download.
@@ -177,10 +179,10 @@ if step not in [1] and step == 0:
         #     df_download
 
         if val.name.split(".")[1] == "xlsx" or val.name.split(".")[1] == "xls":
-            df = pd.read_excel(val.name)
+            df = pd.read_excel(val,engine="openpyxl")
             step = 1
         elif val.name.split(".")[1] == "csv":
-            df = pd.read_csv(val.name)
+            df = pd.read_csv(val)
             step = 1
         else:
             st.write("Invalid file Type")
@@ -220,8 +222,6 @@ if step == 1:
 
         # for i in var_dict.keys():
         #     exec("%s = %f"%(i,var_dict[i]))
-
-# R/(1+1j*2*3.14*R*F*C)
 
 if step == 2:
     tType = st.radio(
