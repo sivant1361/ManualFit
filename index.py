@@ -277,20 +277,20 @@ if step == 3:
         fig, (ax1, ax2) = plt.subplots(1, 2)
         fig.set_figheight(6)
         fig.set_figwidth(15)
-        ax1.plot(log(globals()[list(var_dict.keys())[0]]), log(Real), color='r')
-        ax1.plot(log(globals()[list(var_dict.keys())[0]]), log(pred.real), color='k', marker="*",
+        ax1.plot(log(globals()[list(var_dict.keys())[0]]), log(pred.real), color='r')
+        ax1.plot(log(globals()[list(var_dict.keys())[0]]), log(Real), color='k', marker="*",
                 linestyle='', markersize=10)
         ax1.set_title("Real", fontsize=12)
 
-        ax2.plot(log(globals()[list(var_dict.keys())[0]]), log(Img), color='b')
-        ax2.plot(log(globals()[list(var_dict.keys())[0]]), log(pred.imag), color='c', marker="*",
+        ax2.plot(log(globals()[list(var_dict.keys())[0]]), log(pred.imag), color='b')
+        ax2.plot(log(globals()[list(var_dict.keys())[0]]), log(Img), color='c', marker="*",
                 linestyle='', markersize=10)
         ax2.set_title("Imaginary", fontsize=12)
         plt = fig
         
     elif tType in "Real":
-        plt.plot(globals()[list(var_dict.keys())[0]], target, color='r')
-        plt.plot(globals()[list(var_dict.keys())[0]], pred, color='k',
+        plt.plot(globals()[list(var_dict.keys())[0]], pred, color='r')
+        plt.plot(globals()[list(var_dict.keys())[0]], target, color='k',
                 marker="*", linestyle='', markersize=10)
     st.pyplot(plt)
     # if st.button('Download Pic'):
